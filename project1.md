@@ -132,8 +132,5 @@ sudo rm /var/www/projectlamp/index.php
 *Insert image*
 
 
-
-
-
 # Questions
 Is yum pacakage manager used in Ubuntu or just CentOS?
