@@ -11,7 +11,7 @@
  - navigating to the Connection -> Data tab. I then inserted the auto-login username
  - clicked open -> Voila!
 
- *Insert image - 1 EC2 Instance Putty *
+![1 EC2 Instace Putty ](https://user-images.githubusercontent.com/80431204/129098766-43a206da-eb43-4835-8c64-a938df50c373.png)
 
 ## Step 1 - Installing Apache 
 Updated apt package manager
