@@ -134,5 +134,6 @@ sudo rm /var/www/projectlamp/index.php
 
 
 
-### Questions
+
+# Questions
 Is yum pacakage manager used in Ubuntu or just CentOS?
