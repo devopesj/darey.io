@@ -139,10 +139,12 @@ Create index.php file and add Php code
 Inserted into file:
 - "<?php
 phpinfo();"
+
 ![16 php info terminal](https://user-images.githubusercontent.com/80431204/129102509-e336e748-4ae8-4ace-8bc0-08aa81e53ccb.png)
 
 Remove index.php code as instructed
 - sudo rm /var/www/projectlamp/index.php
+
 ![16 php rm php file](https://user-images.githubusercontent.com/80431204/129102555-c55892b9-896c-4dbb-a9cd-4ea89d51ec79.png)
 
 ### Questions
