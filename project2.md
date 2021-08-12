@@ -142,3 +142,40 @@ Removed the info.php file
 - *sudo rm /var/www/your_domain/info.php*
 
 ![5 rm info php file](https://user-images.githubusercontent.com/80431204/129228481-0a10ce17-f6ce-48c4-903a-c40556760fca.png)
+
+## Step 6 - Retrieving data from MySQL database with PHP
+
+Connect to the MySQL Database
+- *sudo mysql*
+
+![6 SQL PHP sudo mysql](https://user-images.githubusercontent.com/80431204/129263289-a0d1c6db-38a1-48b4-9eb4-80d2f8bd4e41.png)
+
+Create database
+- *CREATE DATABASE `example_database`;*
+
+![6 SQL PHP create database](https://user-images.githubusercontent.com/80431204/129263460-257a46a4-648f-4859-bd87-8bd71ab78431.png)
+
+Create user and password
+- *CREATE USER 'example_user'@'%' IDENTIFIED WITH mysql_native_password BY 'Password123!';*
+
+![6 SQL PHP sudo create new user](https://user-images.githubusercontent.com/80431204/129263499-84344052-3ee4-444b-b025-256d25b2c2ef.png)
+
+Giving the created user permissions to access the created database
+- *GRANT ALL ON example_database.* TO 'example_user'@'%';*
+
+![6 SQL PHP sudo grant access to database](https://user-images.githubusercontent.com/80431204/129263556-2e39b814-79dc-45ff-9d28-a8286ea5327d.png)
+
+Exit MySQL
+- *exit*
+
+Logging into MySQL as created user
+- *mysql -u example_user -p*
+
+![6 SQL PHP accessing database as created user](https://user-images.githubusercontent.com/80431204/129263662-b09cdc2b-2e24-40fc-8e57-41eaa93e1c5a.png)
+
+Display databases for the user
+- SHOW DATABASES;
+
+![6 SQL PHP show databases](https://user-images.githubusercontent.com/80431204/129263701-e1a5b69d-63f0-4107-bc29-f9c7ca62d546.png)
+
+
