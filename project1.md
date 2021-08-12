@@ -34,7 +34,7 @@ AWS Console - Changed security group settings to open inbound connections. Added
 This range allows it to be accessible from any IP Address.
 
 Accessing server via terminal
-- curl http://<ipaddress>:80
+- curl http://ipaddress:80
 
 ![5 apache on putty](https://user-images.githubusercontent.com/80431204/129099862-1765c72b-a095-4f06-b8ac-1747acac5a99.png)
 
