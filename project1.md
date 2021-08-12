@@ -45,7 +45,7 @@ Access server via browser
 ## Step 2 - Installing MySQL
 
 Installing MySQL using apt package maanger
-- *sudo apt install mysql-server**
+- *sudo apt install mysql-server*
 
 ![6 mysql installation](https://user-images.githubusercontent.com/80431204/129099990-37b27c79-37f9-4299-ab33-f87d22eaf8e6.png)
 
