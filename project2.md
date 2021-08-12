@@ -61,16 +61,24 @@ This command is run to remove insecure defualt settings and secure access to the
 answered y to prompts
 - *sudo mysql_secure_installation*
 
-
-
+![2 MySQL Password setup](https://user-images.githubusercontent.com/80431204/129224493-e31fa907-3227-4b1d-924f-1652fbdfd95c.png)
+![2 MySQL questions](https://user-images.githubusercontent.com/80431204/129225170-df17d5ad-feb4-4f10-a87d-86fb2a7d3cb5.png)
 
 - *sudo mysql* - this connected to the SQL Server as a root user
+
+![2 MySQL sudo mysql](https://user-images.githubusercontent.com/80431204/129225167-6a431937-17ab-4587-9319-9e87f00edccd.png)
+
 - mysql> *exit* - this exited the sql server
+
+![2 MySQL exit](https://user-images.githubusercontent.com/80431204/129225175-2dd8d31e-64b5-4d38-b856-4894a1eecbd9.png)
+
 
 ## Step 3 - Php installation
 
 Installing Php
 - *sudo apt install php-fpm php-mysql*
+
+![3 Php installation](https://user-images.githubusercontent.com/80431204/129225691-3f8629ee-5bb4-4353-bce2-3d99b04c1dbc.png)
 
 ## Step 4 - Configuring Nginx to use PHP
 
@@ -80,17 +88,27 @@ Create web root dir for my domain
 Assign ownership of the 
 - *sudo chown -R $USER:$USER /var/www/projectLEMP*
 
+![4 nginx php mkdir chown](https://user-images.githubusercontent.com/80431204/129225752-b38882c7-d4d3-4996-b6fd-2178529d97fe.png)
+
 Create config file using nano
 - *sudo nano /etc/nginx/sites-available/projectLEMP*
+
+![4 nginx php config file](https://user-images.githubusercontent.com/80431204/129225831-123c60a9-f548-46a4-a66a-aa7be02d00d6.png)
 
 Linked our config file to nginxs sites enabled directory
 - *sudo ln -s /etc/nginx/sites-available/projectLEMP /etc/nginx/sites-enabled/*
 
+![4 nginx php link to sites enabled](https://user-images.githubusercontent.com/80431204/129226281-8f44e045-92b1-4867-be30-c2a5ebb951b0.png)
+
 Test config file for syntax errors
 - *sudo nginx -t*
 
+![4 nginx php check syntax errors](https://user-images.githubusercontent.com/80431204/129226330-7f638bed-edda-4223-8e12-97c5f23865bf.png)
+
+
 Disabling the default nginx host
 - *sudo unlink /etc/nginx/sites-enabled/default*
+![4 nginx php unlink default](https://user-images.githubusercontent.com/80431204/129226402-9557c26d-65b3-43b1-b72f-0ec7ae42b654.png)
 
 Reload Nginx
 - *sudo systemctl reload nginx* 
@@ -98,7 +116,12 @@ Reload Nginx
 Create index.html file for site
 - *sudo echo 'Hello LEMP from hostname' $(curl -s http://169.254.169.254/latest/meta-data/public-hostname) 'with public IP' $(curl -s http://169.254.169.254/latest/meta-data/public-ipv4) > /var/www/projectLEMP/index.html*
 
+![4 nginx php reload and index file](https://user-images.githubusercontent.com/80431204/129228025-fc79f0e5-4ec8-475a-9e2e-a055bb7016d9.png)
+
 Navigated to site via ip and dns
+
+![4 nginx php ip port 80](https://user-images.githubusercontent.com/80431204/129228209-2f2e353f-ecd6-447a-b49a-b4abd8ab8bc2.png)
+![4 nginx php dns port 80](https://user-images.githubusercontent.com/80431204/129228215-8bdb7254-3161-4eac-98be-f89a8e637474.png)
 
 ## Step 5 - Testing PHP with Nginx
 
@@ -107,8 +130,15 @@ Create info.php file
 Add this text to info.php via nano: *<?php
 phpinfo();*
 
+![5 info php file](https://user-images.githubusercontent.com/80431204/129228334-c1acd1de-82c7-43d5-af9f-ba56e77118f9.png)
+
 Visited the info.php page via ip and dns
+
+![5 info php ip](https://user-images.githubusercontent.com/80431204/129228404-71f223ba-42d9-491e-bbf5-3e8aa345c9d6.png)
+![5 info php dns](https://user-images.githubusercontent.com/80431204/129228409-5348675d-641d-48e0-a849-84523f54eeba.png)
 
 
 Removed the info.php file
 - *sudo rm /var/www/your_domain/info.php*
+
+![5 rm info php file](https://user-images.githubusercontent.com/80431204/129228481-0a10ce17-f6ce-48c4-903a-c40556760fca.png)
