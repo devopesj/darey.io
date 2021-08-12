@@ -15,7 +15,8 @@
 
 ## Step 1 - Installing Apache 
 Updated apt package manager
-- sudo apt update 
+- sudo apt update
+
 ![2 sudo apt update](https://user-images.githubusercontent.com/80431204/129099160-2cd2b3fb-db29-4610-8c46-0fbd2154de9a.png)
 ![2 sudo apt update run](https://user-images.githubusercontent.com/80431204/129099239-af45446f-45af-454e-8138-7f14d3a42b5f.png)
 
@@ -68,11 +69,13 @@ created medium password
 
 Install Php packages 3 at once
 - sudo apt install php libapache2-mod-php php-mysql
+
 ![8 Php installation](https://user-images.githubusercontent.com/80431204/129100646-fc6591ef-680c-4ea7-8e8a-3dbd91ffca99.png)
 
 
 After installing checking the php version that was installed
 - php -v
+
 ![8 Php version](https://user-images.githubusercontent.com/80431204/129100707-51998208-664c-448b-bed4-edc154c4cc1c.png)
 
 ## Step 4 - Creating a virtual host 
@@ -82,16 +85,19 @@ Created a projectlamp folder in /var/www dir
 
 Assigned ownership of the dir to my user
 - sudo chown -R $USER:$USER /var/www/projectlamp
+
 ![9 virtual host mkdir and chown](https://user-images.githubusercontent.com/80431204/129100785-cdf3cf72-20c7-49f0-9844-44111afa72f5.png)
 
 Created a file and modified using vim
 - sudo vim /etc/apache2/sites-available/projectlamp.conf
 saved and closed using esc, :wq, ENTER.
+
 ![10 VH conf file creation](https://user-images.githubusercontent.com/80431204/129101051-03fee618-3394-42f1-9bb6-e8b637bb0a0c.png)
 ![10 VH conf file content](https://user-images.githubusercontent.com/80431204/129101153-859e9f12-09d8-4a56-a10e-964eb6f8db14.png)
 
 This command below was used to verify the projectlamp.conf file was listed in the expected dir
 - sudo ls /etc/apache2/sites-available
+
 ![11 VH sites available folder list](https://user-images.githubusercontent.com/80431204/129101233-2d496f58-5f22-4d4f-920f-125d159411a3.png)
 
 Enable new virtual site
@@ -102,11 +108,13 @@ To confirm config file does not contain invalid syntax
 - sudo apache2ctl configtest
 Reload apache server to inherit and project changes
 - sudo systemctl reload apache2
+
 ![12 reloading apache](https://user-images.githubusercontent.com/80431204/129101339-3d902af8-3e0f-4be3-8ecf-3f6bd9bdbdbb.png)
 
 Used alternative beginners cd | touch | vim method to create index.html file but after looking at this command it makes sense now so I did it again.
 - sudo echo 'Hello LAMP from hostname' $(curl -s http://169.254.169.254/latest/meta-data/public-hostname) 'with public IP' $(curl -s 
 http://169.254.169.254/latest/meta-data/public-ipv4) > /var/www/projectlamp/index.html
+
 ![13 creation of index html](https://user-images.githubusercontent.com/80431204/129101549-84b6aee7-1c94-45cb-925d-616c9028c2e7.png)
 
 *Alternative method originally used*
@@ -117,6 +125,7 @@ http://169.254.169.254/latest/meta-data/public-ipv4) > /var/www/projectlamp/inde
 
 
 Visit site via browser using IP & DNS port 80
+
 ![14 hello lamp from hostname site](https://user-images.githubusercontent.com/80431204/129101950-c118f182-9ad9-4e6c-9017-6e5f4dcbd76e.png)
 ![14 hello lamp from hostname dns](https://user-images.githubusercontent.com/80431204/129101907-332df048-0b08-45d9-a9cd-452e9fc882f3.png)
 
@@ -127,6 +136,7 @@ Changed dir.conf Directory index file and inserted index.php to change order or 
 -sudo vim /etc/apache2/mods-enabled/dir.conf
 
 Inserted index.php as the first in the Directory index
+
 ![16 php dir index](https://user-images.githubusercontent.com/80431204/129102418-184dc541-d58e-404a-9d0a-4adecf238f0a.png)
 
 Reload apache for the changes to take affect
