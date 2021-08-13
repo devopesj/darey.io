@@ -3,7 +3,9 @@
 ## Step 0 
 Using Git bash to ssh into AWS Instance. 
 I did not have a pem file for my key on my local, so I coverted using puTTy keygen application
-- '''ssh -i "Lenovo.pem" ubuntu@ec2-54-234-12-227.compute-1.amazonaws.com'''
+'''
+ssh -i "Lenovo.pem" ubuntu@ec2-54-234-12-227.compute-1.amazonaws.com
+'''
 
 ![0 Git Bash AWS Instance](https://user-images.githubusercontent.com/80431204/129220519-ccf0c913-911b-4453-8bdb-e14bb8c451bf.png)
 
