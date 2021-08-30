@@ -140,7 +140,7 @@ node index.js
 ![1 node index js](https://user-images.githubusercontent.com/80431204/131337938-98e6324d-dbdb-400d-9fcf-3d247d9a6789.png)
 
 Retrieved IP address and DNS
-````
+```
 curl -s http://169.254.169.254/latest/meta-data/public-ipv4
 curl -s http://169.254.169.254/latest/meta-data/public-hostname
 ```
