@@ -308,7 +308,7 @@ Added the connection string in this format
 DB = 'mongodb+srv://<username>:<password>@<network-address>/<dbname>?retryWrites=true&w=majority'
 ```
 
-![Cloud MongoDB env file](https://user-images.githubusercontent.com/80431204/131395543-37b51abb-9f0b-4e6c-9b18-2804d6e45acc.png)
+![Cloud MongoDB env file](https://user-images.githubusercontent.com/80431204/131403864-e6a82c20-f8ca-4f2a-b6a7-8997179b5e76.png)
 
 Got my connection string from Clusters -> Connect
 Connect your application
