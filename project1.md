@@ -158,4 +158,4 @@ Remove index.php code as instructed
 ![16 php rm php file](https://user-images.githubusercontent.com/80431204/129102555-c55892b9-896c-4dbb-a9cd-4ea89d51ec79.png)
 
 ### Questions
-Is yum pacakage manager used in Ubuntu or just CentOS?
+Is yum pacakage manager used for Red Hat Enterprise Linux like CentOS. APT is used for Ubuntu.
