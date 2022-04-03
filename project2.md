@@ -180,7 +180,7 @@ phpinfo();
 
 ![5 info php file](https://user-images.githubusercontent.com/80431204/129228334-c1acd1de-82c7-43d5-af9f-ba56e77118f9.png)
 
-Visited the info.php page via ip and dns
+Visited the info.php page via ip and DNSs
 
 ![5 info php ip](https://user-images.githubusercontent.com/80431204/129228404-71f223ba-42d9-491e-bbf5-3e8aa345c9d6.png)
 ![5 info php dns](https://user-images.githubusercontent.com/80431204/129228409-5348675d-641d-48e0-a849-84523f54eeba.png)
